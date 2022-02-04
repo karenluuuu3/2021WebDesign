@@ -1,0 +1,133 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+/*body*/
+body{
+	font-family: 'Noto Sans TC', sans-serif;
+	background: #f0efeb;
+	/*移除不必要的間隔*/
+	margin: 0;
+	padding: 0;
+}
+
+header, nav, section, article, footer{
+	text-align: center;
+	/*這些內容置中對齊*/
+}
+
+/*header*/
+header{
+	color: #6c584c;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+/*section*/
+section{
+	color: #6c584c;
+	font-size: 18px;
+}
+
+/*nav*/
+nav{
+	background: #cb997e;
+	padding: 20px;
+	position: sticky; /*表頭*/
+	top: 0; /*滑到他的時候會頂在最上面*/
+}
+
+nav ul{
+	margin: 0;
+	padding: 0;
+}
+
+nav li{
+	display: inline;
+}
+
+nav li a{
+	color: #fff1e6;
+	text-decoration: none;
+	/*去除底線*/
+}
+
+nav li a:hover{
+	color: #ddbea9;
+	font-weight: bold;
+}
+
+
+/*section*/
+section{
+	width: 80%;/*可隨視窗大小調整，內縮80%*/
+	margin: auto;/*物件置中*/
+}
+
+
+/*article*/
+article{
+	display: inline-block;
+	/*設定寬度，否則會以內容元素中最寬的元素寬度作為預設*/
+	width: 180px;
+	/*設定邊寬做為檢視*/
+	border: solid 2px #b7b7a4;
+	/*solid : 實線, #後面是色碼，簡略寫三個d = 六個d : 灰色*/
+	border-radius: 10px;
+	/*round border*/
+	margin: 20px;
+	font-family: Yatra One;
+}
+
+article:hover{
+	background: #a5a58d;
+	color: #fff;
+	cursor: pointer;
+	/*設定滑鼠游標*/
+	box-shadow: 5px 5px 8px rgba(173, 181, 189, 1);
+}
+
+article:active{
+	background: #cb997e;
+	color: #6c584c;
+	border: solid 2px #bc6c25;
+}
+
+.article_a{
+	color: #718355;
+	text-decoration: none;
+}
+
+.article_a:hover{
+	color: #fff;
+}
+
+/* totop */
+aside{
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	z-index: 100000;
+}
+
+.totop{
+	font-size: 30px;
+	color: #6c584c;
+}
+
+.totop:hover{
+	color: #cb997e;
+}
+
+/*footer*/
+footer{
+	clear: both; /*避免中間有奇怪的格式沒有清除*/
+	padding: 20px 0px;
+	text-align: center;
+	color: #6c584c;
+	font-size: 15px;
+}
+
+
+

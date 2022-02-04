@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;
+	padding:0;	
+}
+
+/*aside*/ 
+aside{ 
+	position:fixed;
+	left:50px;
+	top:50px;
+	width:100px;
+	height:300px;
+	z-index:1000;
+} 
+
+.box{
+	font-family: 'Fugaz One', cursive;
+	width: 15px;
+	height: 60px;
+	font-size:40px;
+	line-height:80px;
+	margin-bottom:15px;
+	text-align:center;
+	color:#F35975;
+	background: #e9c46a;
+	box-sizing:border-box;
+	transition: 0.5s;
+}
+
+.box:hover{
+	background:#F35975;
+	color:rgba(252,250,242,1);
+	cursor:cell;
+}
+
+.ch_bg{
+	background: #37758E;
+}
+
+/*section*/ 
+section{ 
+	position:relative;
+	width:100vw;
+	height:120vh;
+	overflow:hidden;
+}
+
+.content{ 	
+	position:absolute;
+	width:100vw;
+	height:120vh;
+	left:0;
+	top:0;
+	display:none;
+}
+
+/*footer*/
+footer{
+	padding:10px;
+	text-align:center;	
+}
+

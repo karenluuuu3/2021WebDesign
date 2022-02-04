@@ -1,0 +1,331 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content=" width=device-width; initial-scale=1.0;">
+<title>DeepInSea | 深海低吟</title>
+	<!--icon-->
+	<link href="images/dark_blue.png" rel="shortcut icon" type="image/ico"/>
+		
+	<!--google font-->
+	
+	<!--css-->
+	<link href="css/index.css" rel="stylesheet" type="text/css">
+
+	<!--js-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+
+	<!---swiper-->
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	
+	<!--font awesome-->
+	<script src="https://kit.fontawesome.com/bade478ead.js" crossorigin="anonymous"></script>
+	
+	<!-- add fancyBox -->
+	<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>	
+</head>
+
+<header>
+	<div class="Logo"><img src="images/logo_v3.png" width="20%" alt="Logo"/></div>		
+	<span onclick="openNav()"><div class="menu"><i class="fas fa-bars"></i></div></span>
+	<div id="SideNav" class="sidenav">
+		<div><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></div>
+		<nav>
+			<div class="box"><p>HOME</p></div>
+			<div class="box"><p>ABOUT</p></div>
+			<div class="box"><p>STORY</p></div>
+			<div class="box"><p>WORKS</p></div>
+			<div class="box"><p>VR battle</p></div>
+			<div class="box"><p>PUBLISH</p></div>
+		</nav>	
+	</div>
+</header>
+	
+<body>
+	<div class="container" id="top">
+	<section>
+	<div class="conbox">
+		<div class="content" style="display: block">
+			<main>
+				<!--banner-->
+				<div class="swiper-container" id="s_pic">
+					<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="images/p1.png"/><p>Escape Room</p></div>
+					<div class="swiper-slide"><img src="images/p2.png"/><p>Start Journey</p></div>
+					<div class="swiper-slide"><img src="images/p3.png"/><p>My Dear</p></div>
+					<div class="swiper-slide"><img src="images/p4.png"/><p>Backtracking</p></div>
+					<div class="swiper-slide"><img src="images/p5.png"/><p>Those Days</p></div>
+					<div class="swiper-slide"><img src="images/p6.png"/><p>Freedom</p></div>
+					</div>
+					<!-- Add Pagination -->
+					<div class="swiper-pagination"></div>
+				</div>	  
+			</main>
+			<div class="scroll-right"><p>20代の私、幽霊船で魔法使いになる方法を求めるのは間違っているだろうか？</p></div>
+			<div class="row">
+				<div class="col-m-6 col-6">
+					<p>
+						<h3>〇 LATEST 〇</h3><br>
+						<h4>= 2021.07.12 =</h4><br>
+						<h5>VR battle</h5><br><br>
+						<h4>= 2021.06.23 =</h4><br>
+						<h5>Upload Website</h5><br><br>
+						<h4>= 2021.06.18 =</h4><br>
+						<h5>Publish DeepInSea_v1.0<br>(PC version)</h5>
+					</p>
+				</div>
+				<div class="col-m-6 col-6"><img src="images/cgw1.JPG"></div>
+			</div>
+			
+			<footer>
+				2020-2021 DeepInSea | NOT FOR SALE
+				<a href="https://youtu.be/mlk8w8PjlOs" target="_blank" class="footer_icon"><i class="fab fa-youtube"></i></a>
+			</footer>
+		</div>
+		
+		<div class="content">
+			<h1>〇 ABOUT 〇</h1>
+			<h4>深海低吟製作小組</h4>
+			<div class="row" id="profile">
+				<div class="col-m-6 col-3"><img src="images/mini.jpg"><p>林千慧</p><p>人物建模</p></div>
+				<div class="col-m-6 col-3"><img src="images/k.jpg"><p>呂思函</p><p>音樂/CG</p></div>		
+				<div class="col-m-6 col-3"><img src="images/book.jpg"><p>陳書玟</p><p>場景/動畫</p></div>
+				<div class="col-m-6 col-3"><img src="images/cc.jpg"><p>張巧如</p><p>程式/美術</p></div>
+			</div>
+			
+			<h4>架構圖</h4>
+			<div class="row">
+				<div class="col-m-12 col-12"><img src="images/bs.png"></div>	
+			</div>
+			<footer>
+				2020-2021 DeepInSea | NOT FOR SALE
+				<a href="https://youtu.be/mlk8w8PjlOs" target="_blank" class="footer_icon"><i class="fab fa-youtube"></i></a>
+			</footer>
+		</div>
+		
+		<div class="content">
+			<h1>〇 STORY 〇</h1>
+			<h4>= 此為PC版畫面= </h4>
+			<p>身為考古學者的你潛入海底，聽到一陣優美歌聲便逐漸失去意識，然後你在一個陌生的船艙醒來...</p>
+			<div class="row">
+				<!--套用相簿fancybox效果-->
+				<div class="col-m-6 col-6">
+				<a class="fancybox" rel="gallery1" href="images/1.png" title="Something Spooky by Your Side..."><img src="images/1.png"></a>
+					<a class="fancybox" rel="gallery1" href="images/3.png" title="Start Journey !"></a>
+					<a class="fancybox" rel="gallery1" href="images/4.png" title="Shadow of Mermiad"></a>
+					<a class="fancybox" rel="gallery1" href="images/5.png" title="Oops.. You're trapped."></a>
+					<a class="fancybox" rel="gallery1" href="images/6.png" title="Secrets in Cabin !?"></a>
+
+					<p>Chapter 01</p>
+				</div>
+
+				<!--套用相簿fancybox效果-->
+				<div class="col-m-6 col-6">
+				<a class="fancybox" rel="gallery2" href="images/2.png" title="DANGER! DANGER!"><img src="images/2.png"></a>
+					<a class="fancybox" rel="gallery2" href="images/7.png" title="Suspicious"></a>
+					<a class="fancybox" rel="gallery2" href="images/8.png" title="Ghost Captain"></a>
+
+					<p>Chapter 02</p>
+				</div>
+
+				<!--套用相簿fancybox效果-->
+				<div class="col-m-6 col-6">
+				<a class="fancybox" rel="gallery3" href="images/9.png" title="The Truth"><img src="images/9.png"></a>
+					<a class="fancybox" rel="gallery3" href="images/10.png" title="Prince Alexander"></a>
+					<a class="fancybox" rel="gallery3" href="images/11.png" title="The Statue looks Strange..."></a>
+					<a class="fancybox" rel="gallery3" href="images/12.png" title="Sadness, Regret, and Injustice"></a>
+
+					<p>Chapter 03</p>
+				</div>
+
+				<!--套用相簿fancybox效果-->
+				<div class="col-m-6 col-6">
+				<a class="fancybox" rel="gallery4" href="images/13.png" title="Princess Victoria"><img src="images/13.png"></a>
+					<a class="fancybox" rel="gallery4" href="images/14.png" title="Reunion"></a>
+					<a class="fancybox" rel="gallery4" href="images/16.png" title="Joyful Days..."></a>
+					<a class="fancybox" rel="gallery4" href="images/15.png" title="Time Machine behind Mirror"></a>
+
+					<p>Chapter 04</p>
+				</div>
+
+				<!--套用相簿fancybox效果-->
+				<div class="col-m-6 col-6">
+				<a class="fancybox" rel="gallery5" href="images/17.png" title="Magic Power"><img src="images/17.png"></a>
+					<a class="fancybox" rel="gallery5" href="images/18.png" title="Combat Evil Mermaid!"></a>
+					<a class="fancybox" rel="gallery5" href="images/19.png" title="Lauch Magic Attack!"></a>
+					<a class="fancybox" rel="gallery5" href="images/20.png" title="Finally Purify the Meraid..."></a>
+
+					<p>Chapter 05</p>
+				</div>
+
+				<!--套用相簿fancybox效果-->
+				<div class="col-m-6 col-6">
+				<a class="fancybox" rel="gallery6" href="images/21.png" title="Diary"><img src="images/21.png"></a>
+					<a class="fancybox" rel="gallery6" href="images/22.png" title="Return"></a>
+
+					<p>After that...</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-m-6 col-4"><img src="images/3.png"><p>Start Journey !</p></div>
+				<div class="col-m-6 col-4"><img src="images/4.png"><p>Shadow of Mermiad</p></div>
+				<div class="col-m-6 col-4"><img src="images/5.png"><p>Oops.. You're trapped.</p></div>
+			</div>
+
+			<div class="row">
+				<div class="col-m-6 col-4"><img src="images/6.png"><p>Secrets in Cabin !?</p></div>
+				<div class="col-m-6 col-4"><img src="images/7.png"><p>Suspicious</p></div>
+				<div class="col-m-6 col-4"><img src="images/8.png"><p>Ghost Captain</p></div>
+			</div>
+
+			<div class="row">
+				<div class="col-m-6 col-4"><img src="images/10.png"><p>Prince Alexander</p></div>
+				<div class="col-m-6 col-4"><img src="images/11.png"><p>The statue looks strange...</p></div>
+				<div class="col-m-6 col-4"><img src="images/12.png"><p>Sadness, Regret, and Injustice</p></div>
+			</div>
+
+			<div class="row">
+				<div class="col-m-6 col-4"><img src="images/14.png"><p>Reunion</p></div>
+				<div class="col-m-6 col-4"><img src="images/16.png"><p>Joyful Days...</p></div>
+				<div class="col-m-6 col-4"><img src="images/15.png"><p>Time Machine behind Mirror</p></div>
+			</div>
+
+			<div class="row">
+				<div class="col-m-6 col-4"><img src="images/18.png"><p>Combat Evil Mermaid !</p></div>
+				<div class="col-m-6 col-4"><img src="images/19.png"><p>Keep Going On !!!</p></div>
+				<div class="col-m-6 col-4"><img src="images/20.png"><p>Finally Purify the Meraid</p></div>
+			</div>
+
+			<div class="row">
+				<div class="col-m-6 col-4"><img src="images/22.png"><p>Return</p></div>
+			</div>
+			
+			<footer>
+				2020-2021 DeepInSea | NOT FOR SALE
+				<a href="https://youtu.be/mlk8w8PjlOs" target="_blank" class="footer_icon"><i class="fab fa-youtube"></i></a>
+			</footer>
+		</div>
+		
+		<div class="content">
+			<h1>〇 WORKS 〇</h1>
+			<h4>= 此為PC版畫面= </h4>
+			<p>
+				<div class="row">
+					<div class="col-m-6 col-6"><img src="images/w1.png"><p>= LOGO =</p></div>
+					<div class="col-m-6 col-6"><img src="images/w10.png"><p>= Microphone Test =</p></div>
+				</div>
+
+				<div class="row">
+					<div class="col-m-6 col-6"><img src="images/w2.png"><p>= Spirit A : Phoenix =</p></div>
+					<div class="col-m-6 col-6"><img src="images/w3.png"><p>= Spirit B : Reindeer =</p></div>
+				</div>
+
+				<div class="row">
+					<div class="col-m-6 col-6"><img src="images/w4.png"><p>= Spirit C : Dolphin =</p></div>
+					<div class="col-m-6 col-6"><img src="images/w5.png"><p>= Spirit D : Fox =</p></div>
+				</div>
+
+				<div class="row">
+					<div class="col-m-6 col-6"><img src="images/w6.png"><p>= Riddle A =</p></div>
+					<div class="col-m-6 col-6"><img src="images/w7.png"><p>= Riddle B =</p></div>
+				</div>
+
+				<div class="row">
+					<div class="col-m-6 col-6"><img src="images/6.png"><p>= Riddle C =</p></div>
+					<div class="col-m-6 col-6"><img src="images/w8.png"><p>= Riddle D =</p></div>
+				</div>
+
+				<div class="row">
+					<div class="col-m-6 col-6"><img src="images/w9.png"><p>= My Bag =</p></div>
+					<div class="col-m-6 col-6"><img src="images/w11.png"><p>= Magic Pen =</p></div>
+				</div>
+			</p>
+		
+			<footer>
+				2020-2021 DeepInSea | NOT FOR SALE
+				<a href="https://youtu.be/mlk8w8PjlOs" target="_blank" class="footer_icon"><i class="fab fa-youtube"></i></a>
+			</footer>
+		</div>
+		
+		<div class="content">
+			<h1>〇 VR battle 〇</h1>			
+			<div class="row">
+				<div class="col-m-6 col-6"><img src="images/cgw5.JPG"><p>= Poster =</p></div>
+				<div class="col-m-6 col-6"><img src="images/cgw6.JPG"><p>= Demo Video =</p></div>
+			</div>
+
+			<div class="row">
+				<div class="col-m-6 col-6"><img src="images/cgw4.JPG"><p>= Lobby =</p></div>
+				<div class="col-m-6 col-6"><img src="images/cgw3.JPG"><p>= Photo =</p></div>
+			</div>
+			
+			<div class="row">
+				<div class="col-m-6 col-6"><img src="images/poster1.png"></div>
+				<div class="col-m-6 col-6"><img src="images/poster2.png"></div>
+			</div>
+			
+			<footer>
+				2020-2021 DeepInSea | NOT FOR SALE
+				<a href="https://www.youtube.com/watch?v=AbonnMcxKoM" target="_blank" class="footer_icon"><i class="fab fa-youtube"></i></a>
+			</footer>
+		</div>		
+		
+		<div class="content">
+			<h1>〇 PUBLISH 〇</h1>
+			<p>遊戲尚在測試階段，有興趣的朋友也可以載來試玩<br>更歡迎填寫表單給我們回饋喔o(*￣▽￣*)ブ</p>
+			<a href="https://drive.google.com/file/d/1rEjeN_gF0xp9PkjjnOg4lyK897qsZGcz/view?usp=sharing" target="_blank" class="nav_icon"><i class="fas fa-link"></i></a>&nbsp;&nbsp;
+			<a href="https://docs.google.com/forms/d/e/1FAIpQLSfOWBTkvK0Sq1E8O2hYacQinHHKsn9uLQBltMJNuCne2Wn50g/viewform?usp=sf_link" target="_blank" class="nav_icon"><i class="fas fa-sticky-note"></i></a>
+			
+			<footer>
+				2020-2021 DeepInSea | NOT FOR SALE
+				<a href="https://www.youtube.com/watch?v=AbonnMcxKoM" target="_blank" class="footer_icon"><i class="fab fa-youtube"></i></a>
+			</footer>
+		</div>		
+	</div>
+	</section>
+	</div>
+	
+	<!-- aside -->
+	<aside>
+		<a href="#top">
+			<div class="totop"><i class="fas fa-caret-square-up"></i></div>
+		</a>
+	</aside>
+
+	<!-- Side Bar close btn-->
+	<script>
+		function openNav() {
+			document.getElementById("SideNav").style.width = "250px";
+		}
+		function closeNav() {
+			document.getElementById("SideNav").style.width = "0";
+		}
+	</script>
+	
+	<!-- Initialize Swiper -->
+	<script>
+		var swiper = new Swiper("#s_pic", {
+			speed:1000,
+			spaceBetween: 500,
+			centeredSlides: true,
+			effect: "fade",
+			autoplay: {
+		  		delay: 3500,
+		  		disableOnInteraction: false,
+			},
+			pagination: {
+		  		el: ".swiper-pagination",
+		  		type: "progressbar",
+		  		clickable: true,
+			},
+	  	});
+	</script>
+</body>
+</html>

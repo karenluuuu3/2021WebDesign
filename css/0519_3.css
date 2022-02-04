@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*aside*/ 
+aside{ 
+	float:left; 
+	height:480px; 
+	width:200px; 
+} 
+
+.box{ 
+	width: 200px; 
+	height: 160px; 
+	font-size:100px; 
+	background: #0CF; 
+}
+
+.box:hover{
+	background: #36F;
+	cursor: pointer;
+}
+
+.ch_bg{
+	background: #36F;
+}
+
+/*section*/ 
+section{ 
+	/*堆疊容器*/
+	position: relative;
+	
+	float:left; 
+	height:480px; 
+	width:480px; 
+	background:#ddd; 
+	
+	/*超出範圍的部分隱藏*/
+	overflow: hidden;
+}
+
+.content{ 
+	position: relative;
+	
+	width:480px; 
+	height:480px;
+	background:#F60; 
+}
+
+.yel{
+	background: #FF0;
+}
+
+.pink{
+	background: #F3C;
+}
+
+
+

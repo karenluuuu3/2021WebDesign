@@ -1,0 +1,122 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url("mid_nav.css");
+
+body{
+	font-family: 'Squada One', 'Noto Sans TC', Verdana, Geneva, sans-serif;
+	margin:0;
+	padding:0;
+	background: #FFDB45;
+}
+
+/*selection*/
+/*變更選取文字的顏色，讓反白顏色比較符合主題*/
+::-moz-selection{ /*Firefox*/
+	color: rgba(255, 255, 255, 1);
+	background: #fb8500;
+}
+
+::selection{
+	color: rgba(255, 255, 255, 1);
+	background: #fb8500;
+}
+
+/*header*/
+header{
+	width: 100%;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+/*section*/
+section{
+	width: 80%;/*可隨視窗大小調整，內縮80%*/
+	margin: auto;/*物件置中*/
+}
+
+
+/*article*/
+article{
+	/*置左對齊*/
+	float: left;
+	box-sizing: border-box;
+	width: 33.33%;
+	text-align: center;
+	padding: 5px 0px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	
+	font-size: 15px;
+	font-family: 'Squada One';
+	color: #222;
+	background: #ffedd8;
+	
+	
+	/*background : 屬性 1s / 秒數 color : 屬性*/
+	transition: background 0.8s, color 0.8s;
+	/*-webkit : 前綴詞*/
+	-webkit-transition: background 0.8s, color 0.8s;
+}
+
+article:hover{
+	cursor: cell;
+	color: rgba(34, 34, 34, 0.8);
+	background: #e7bc91;	
+}
+
+article:active{
+	color: rgba(34, 34, 34, 0.8);
+	background: #a47148;	
+}
+
+.article_a{
+	color: rgba(34, 34, 34, 0.8);
+	background: #ffedd8;
+	text-decoration: none;
+}
+
+.article_a:hover{
+	cursor: cell;
+	color: rgba(34, 34, 34, 0.8);
+	background: #e7bc91;
+}
+
+.article_a:nth-child(2n){
+	background: #fff;
+}
+
+/*aside*/
+aside{
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	z-index: 100000;
+}
+
+.totop{/*以下數據會隨圖片大小改變*/
+	clear: both;
+	float: right;
+	width: 44px;
+	height: 44px;
+	background: rgba(38, 70, 83, 1) url(../images/top2x.png) no-repeat;
+	background-size: 200%;
+	background-position: 0px 0px; /*x軸位置 y軸位置*/
+	/*底圖可以做成在同一張，避免換圖的時候會有loading時間差*/
+}
+
+.totop:hover{
+	background: rgba(38, 70, 83, 1) url(../images/top2x.png) no-repeat;
+	background-size: 200%;
+	background-position: -44px 0px;
+}
+
+/*footer*/
+footer{
+	clear: both; /*避免中間有奇怪的格式沒有清除*/
+	padding: 20px 0px;
+	text-align: center;
+	color: #222;
+	font-size: 12px;
+	font-family: 'Noto Sans TC', sans-serif;
+}

@@ -1,0 +1,184 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*所有標籤(加*)都吐掉奇怪的框框*/
+*{
+	padding: 0;
+	margin: 0;
+}
+
+/*body*/
+body{
+	background: rgba(252, 250, 242, 1);
+}
+
+/*header*/
+header{
+	/*固定*/
+	position: fixed;
+	/*全屏*/
+	width: 100%;
+	/*貼緊上方*/
+	top: 0;
+	/*也可以特別指定要增加的方位: padding: 20px 5px 10px 15px : 上右下左*/
+	/*border & margin也是這樣用*/
+	padding: 20px;
+	/*最外寬度不會因為加了padding和border而變胖(往內擠)，而影響其他區塊的排版*/
+	box-sizing: border-box;
+	/*顏色另一種表示法*/
+	background: rgba(254, 223, 225, 0.8);
+	/*保證會在所有元素的最上層，數值越大在越上方*/
+	z-index: 100000;	
+}
+
+/*nav*/
+nav{
+	width: 60%;
+	/*版面置中*/
+	margin: auto;
+	/*文字置中*/
+	text-align: center;
+	font-size: 20px;
+	font-family: 'Merienda';
+}
+
+nav ul{
+	margin: 0;
+	padding: 0;
+}
+
+nav li{
+	display: inline-block;
+}
+
+nav li a{
+	display: inline-block;
+	padding: 10px;
+	color: rgba(241, 124, 103, 1);
+	text-decoration:none; 
+}
+
+nav li a:hover{
+	color: rgba(171, 59, 58, 1);
+}
+
+/*section*/
+section{
+	position: relative;
+	width: 80%;
+	height: 500px;
+	/*隱藏多出來的東西*/
+	overflow: hidden;
+	/*避免有奇怪的空白*/
+	margin: 100px auto 0px;
+}
+
+.left, .right{
+	position: absolute;
+	box-sizing: border-box;
+}
+
+.right{
+	width: 100%;
+}
+
+.left{
+	width: 50%;
+	/*left和top是因為有設成absolute才可以設定*/
+	left: 80px;
+	top: 150px;
+	padding: 30px;
+	/*避免被後方內容擋住*/
+	z-index: 20;
+	color: rgba(241, 124, 103, 1);
+}
+
+.left h1{
+	font-size: 60px;
+	/*em: 瀏覽器預設尺寸: default: 16px*/
+	line-height: 1em;
+	padding-bottom: 20px;
+	font-family: 'Berkshire Swash';
+	font-weight: 900;
+}
+
+.left p{
+	width: 100%;
+	font-size: 20px;
+	line-height: 1.2em;
+	font-family: 'Caveat';
+	color: rgba(115, 67, 56, 1);
+}
+
+/*article*/
+article{
+	width: 80%;
+	margin: auto;
+	margin-top: 20px;
+}
+
+.card{
+	/*置左對齊*/
+	float: left;
+	box-sizing: border-box;
+	width: 33.33%;
+	text-align: center;
+	border: solid 5px rgba(254, 227, 224, 1);
+	padding: 5px 0px;
+	
+	font-size: 15px;
+	font-family: 'Merienda';
+	background: rgba(241, 124, 103, 1);
+	color: rgba(255, 255, 255, 1);
+	
+	/*background : 屬性 1s / 秒數 color : 屬性*/
+	transition: background 1s, color 1s;
+	/*-webkit : 前綴詞*/
+	-webkit-transition: background 1s, color 1s;
+}
+
+.card:hover{
+	cursor: pointer;
+	/*adjust properties*/
+	background: rgba(171, 59, 58, 1);
+	color: rgba(255, 255, 255, 0.5);
+}
+
+/*aside*/
+aside{
+	/*前面有設float: left，會影響後面，所以先用clear: both清除*/
+	clear: both;
+	width: 80%;
+	margin: auto;
+}
+
+.wraptext{
+	float: left;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 30px;
+	background: rgba(255, 255, 255, 1);
+	border: solid 5px rgba(254, 227, 224, 1);
+	color: rgba(115, 67, 56, 1);
+}
+
+.wraptext p{
+	line-height: 2em;
+	font-size: 15px;
+	font-family: 'Cairo';
+}
+
+.wraptext img{
+	/*縮放時圖繞文*/
+	float: left;
+	padding-right: 20px;
+}
+
+/*footer*/
+footer{
+	clear: both;
+	padding: 20px 0px;
+	text-align: center;
+	color: rgba(171, 59, 58, 1);
+	font-size: 12px;
+}

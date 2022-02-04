@@ -1,0 +1,184 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	margin:0;
+	padding:0;
+	background: rgba(229,229,229,1);
+}
+
+/*header*/
+header{
+	width: 100%;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+header img{
+	display: block;
+	padding: 20px;
+	margin: auto;
+}
+
+/*nav*/
+nav{
+	width:100%;
+	margin: auto;
+	text-align: center;
+	background: rgba(38, 70, 83, 1);
+	position: -webkit-sticky; /*Safari，有前綴詞是因為要特別給某一種瀏覽器使用*/
+	position: sticky; /*表頭*/
+	top: 0; /*滑到他的時候會頂在最上面*/
+	z-index:2000;
+}
+
+nav ul{
+	margin: 0; 
+	padding: 0;
+}
+
+nav li{
+	display: inline-block;
+}
+
+nav li a{
+	display: inline-block;
+	padding:20px;
+	color: rgba(255,255,255,1);
+	text-decoration: none;
+}
+
+nav li a:hover{
+	color: rgba(221,120,47,1);
+}
+
+/*section*/
+section{
+	width: 80%;
+	margin: auto;
+	/*版面欄位數量*/
+	/*內容高度不一樣時，使用inline-block會內容凌亂，區塊間會有空白落差*/
+	/*所以使用column-count*/
+	/*會自動依照版面幫你排版*/
+	-webkit-column-count: 3; /*Chrome, Safari, Opera*/
+	-moz-column-count: 3; /*Firefox*/
+	column-count: 3;
+	
+	/*區塊之間的間隔*/
+	-webkit-column-gap: 20px; /*Chrome, Safari, Opera*/
+	-moz-column-gap: 20px; /*Firefox*/
+	column-gap: 20px;
+}
+
+.box{
+	display: inline-block;
+	box-sizing: border-box;
+	width: 100%;
+	background: rgba(255, 255, 255, 1);
+	margin: 12px 0px 0px;
+	z-index: 10;
+	overflow: hidden;	
+	
+	/*shadow : 水平位移、垂直位移、模糊程度、顏色*/
+	box-shadow: 2px 2px 8px rgba(173, 181, 189, 1);
+	/*邊框導圓角*/
+	border-radius: 15px;
+}
+
+.box:hover{
+	cursor: pointer;
+}
+
+.imgbox{
+	width: 100%;
+	overflow: hidden;
+}
+
+.box .imgbox img{	
+	float: left; /*圖片放大縮小的過程不會跑出外框*/
+	width: 100%;
+	
+	-webkit-transform: scale(1, 1); /*Safari*/ /*x, y*/
+	-ms-transform: scale(1, 1); /*IE 9*/
+	transform: scale(1, 1); /*Standard Syntax*/
+	
+	/*動態設定*/
+	transition: transform 1s;
+	-webkit-transition: transform 1s;
+	
+	/*動畫方式*/
+	transition-timing-function: ease-in-out;
+	-webkit-transition-timeing-function: ease-in-out; /*Safari*/
+}
+
+.box:hover .imgbox img{
+	-webkit-transform: scale(1.2, 1.2); /*Safari*/
+	-ms-transform: scale(1.2, 1.2); /*IE 9*/
+	transform: scale(1.2, 1.2); /*Standard Syntax*/
+}
+
+.box h3{
+	box-sizing: border-box;
+	padding: 0px 20px;
+	color: rgba(221, 120, 47, 1);	
+}
+
+.box p, .box1 p, .box2 p{
+	box-sizing: border-box;
+	padding: 0px 20px;
+	color: rgba(42, 157, 143, 1);
+}
+
+.head{
+	display: inline-block;
+	padding: 0px 20px 20px;
+}
+
+.head img{/*小頭貼 從正方形改成圓形*/
+	float: left;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%; /*正方形縮成圓形；長方形會縮成橢圓*/
+}
+
+.head span{
+	float: left;
+	font-size: 13px;
+	color: rgba(42, 157, 143, 1);
+	/*讓底下日期置中，行高搭配旁邊的圖*/
+	line-height: 40px;
+	margin-left: 10px;
+}
+
+/*aside*/
+aside{
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	z-index: 100000;
+}
+
+.totop{/*以下數據會隨圖片大小改變*/
+	width: 44px;
+	height: 44px;
+	background: rgba(38, 70, 83, 1) url(../images/top2x.png) no-repeat;
+	background-size: 200%;
+	background-position: 0px 0px; /*x軸位置 y軸位置*/
+	/*底圖可以做成在同一張，避免換圖的時候會有loading時間差*/
+}
+
+.totop:hover{
+	background: rgba(38, 70, 83, 1) url(../images/top2x.png) no-repeat;
+	background-size: 200%;
+	background-position: -44px 0px;
+}
+
+/*footer*/
+footer{
+	clear: both; /*避免中間有奇怪的格式沒有清除*/
+	padding: 20px 0px;
+	text-align: center;
+	color: rgba(38,70,83,1);
+	font-size: 12px;
+}

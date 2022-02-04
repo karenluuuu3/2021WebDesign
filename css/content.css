@@ -1,0 +1,239 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url("mid_nav.css");
+
+/*selection*/
+/*變更選取文字的顏色，讓反白顏色比較符合主題*/
+::-moz-selection{ /*Firefox*/
+	color: rgba(255, 255, 255, 1);
+	background: #fb8500;
+}
+
+::selection{
+	color: rgba(255, 255, 255, 1);
+	background: #fb8500;
+}
+
+body{
+	font-family:sans-serif;
+	margin:0;
+	padding:0;
+	background: #FFDB45;
+}
+
+/*header*/
+header{
+	width: 100%;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+/*section*/
+section{
+	width: 80%;
+	margin: auto;
+	/*版面欄位數量*/
+	/*內容高度不一樣時，使用inline-block會內容凌亂，區塊間會有空白落差*/
+	/*所以使用column-count*/
+	/*會自動依照版面幫你排版*/
+	-webkit-column-count: 4; /*Chrome, Safari, Opera*/
+	-moz-column-count: 4; /*Firefox*/
+	column-count: 4;
+	
+	/*區塊之間的間隔*/
+	-webkit-column-gap: 20px; /*Chrome, Safari, Opera*/
+	-moz-column-gap: 20px; /*Firefox*/
+	column-gap: 20px;
+}
+
+.box{
+	display: inline-block;
+	box-sizing: border-box;
+	width: 100%;
+	background: rgba(255, 255, 255, 1);
+	margin: 12px 0px 0px;
+	z-index: 10;
+	overflow: hidden;	
+	
+	/*shadow : 水平位移、垂直位移、模糊程度、顏色*/
+	box-shadow: 2px 2px 8px rgba(173, 181, 189, 1);
+	/*邊框導圓角*/
+	border-radius: 15px;
+}
+
+.box:hover{
+	cursor: cell;
+}
+
+.imgbox{
+	width: 100%;
+	overflow: hidden;
+}
+
+
+.box .imgbox img{
+	float: left; /*圖片放大縮小的過程不會跑出外框*/
+	width: 100%;
+	filter: grayscale(100%);
+}
+
+/*圖片旋轉放大*/
+.box .imgbox img{	
+	-webkit-transform: rotate(0deg) scale(1, 1); /*Safari*/ /*x, y*/
+	-ms-transform: rotate(0deg) scale(1, 1); /*IE 9*/
+	transform: rotate(0deg) scale(1, 1); /*Standard Syntax*/
+}
+
+.box:hover .imgbox img{
+	filter: grayscale(0%);
+	/*rotate時放大，避免圖後背景露出來*/
+	-webkit-transform: rotate(-5deg) scale(1.2, 1.2); /*Safari*/
+	-ms-transform: rotate(-5deg) scale(1.2, 1.2); /*IE 9*/
+	transform: rotate(-5deg) scale(1.2, 1.2); /*Standard Syntax*/
+}
+
+.box h3{
+	box-sizing: border-box;
+	padding: 0px 20px;
+	color: #fb8500;
+}
+
+.box p{
+	box-sizing: border-box;
+	padding: 0px 20px;
+	color: rgba(42, 157, 143, 1);
+}
+
+article{
+	float:left;
+	width:100%;
+	box-sizing:border-box;
+	margin:50px 0px 0px;
+	background:rgba(255,255,255,.5);
+}
+
+/*2n : 雙數*/
+/*雙數則底色變色*/
+/*偽類 Pseudo Class*/
+article:nth-child(2n){
+	background: rgba(255, 190, 10, .1);
+}
+
+
+article .picbox{
+	box-sizing: border-box;
+	
+	/*absolute前要relative*/
+	position: relative;
+	overflow:hidden;
+	width:100%;
+	min-width:1200px;
+	height:800px;
+	background-size:50%;
+	font-family: 'Squada One', 'Noto Sans TC';
+}
+
+article .desbox{
+	float: left;
+	/*特殊容器內的設定要先做relative，否則會以瀏覽器為框架去移動*/
+	position: relative;
+	width: 50%;
+	box-sizing: border-box;
+	
+	/*圖片會撐滿容器，文字會卡在邊框 => 想要讓文字聚集一點*/
+	padding: 80px;
+	line-height: 2em;
+	/*justify : 讓文字較寬、文字左右切齊*/
+	text-align: justify;
+}
+
+.desbox h1{
+	/*font-family: 'Noto Serif TC', serif;*/
+	font-family: serif;
+	font-weight: 900;
+	font-size: 40px;
+	color: rgba(229, 94, 56, 1);
+	line-height: 2em;
+}
+
+/*報導的文字最後會有的小圖*/
+/*偽元素 Pseudo Element : 也可以加日期文字*/
+.desbox p::after{
+	content: url(../images/sq.jpg);	
+}
+
+.picbox img{
+	width:100%;
+}
+
+.picbox:hover img{
+	-webkit-filter: brightness(40%); /*Safari*/
+	filter: brightness(40%);
+}
+
+.picbox:hover .fadebox{
+	opacity: 1;
+}
+
+.fadebox{
+	/*偵測容器中心點的位置*/
+	/*把中心從左上角移到正中間*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	
+	-ms-transform: translate(-50%, -50%); /*IE 9*/
+	-webkit-transform: translate(-50%, -50%); /*Safari*/
+	transform: translate(-50%, -50%);
+	opacity: 0;
+}
+
+.fadebox a{
+	display: block;
+	font-size: 25px;
+	padding: 16px 32px;
+	color: rgba(255, 255, 255, 1);
+	text-decoration: none;
+	background: rgba(229, 94, 56, 1);
+}
+
+.fadebox a:hover{
+	color: rgba(229, 94, 56, 1);
+	background: rgba(255, 255, 255, 1);
+}
+
+/*aside*/
+aside{
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	z-index: 100000;
+}
+
+.totop{/*以下數據會隨圖片大小改變*/
+	clear: both;
+	float: right;
+	width: 44px;
+	height: 44px;
+	background: rgba(38, 70, 83, 1) url(../images/top2x.png) no-repeat;
+	background-size: 200%;
+	background-position: 0px 0px; /*x軸位置 y軸位置*/
+	/*底圖可以做成在同一張，避免換圖的時候會有loading時間差*/
+}
+
+.totop:hover{
+	background: rgba(38, 70, 83, 1) url(../images/top2x.png) no-repeat;
+	background-size: 200%;
+	background-position: -44px 0px;
+}
+
+
+/*footer*/
+footer{
+	clear: both; /*避免中間有奇怪的格式沒有清除*/
+	padding: 20px 0px;
+	text-align: center;
+	color: #222;
+	font-size: 12px;
+}

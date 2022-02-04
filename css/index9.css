@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face{
+	font-family: GenSenRounded;
+	src: local("GenSenRounded-L"), url("GenSenRounded-L.ttc");
+}
+
+header, section{
+	font-family: GenSenRounded;
+	text-align: center;
+}
+
+header{
+	font-style: normal;
+	background: #58B2DC;
+	padding: 8px;
+}
+
+
+/*aside*/
+aside{
+	font-family: GenSenRounded;
+	margin: auto;
+	background: #FCFAF2;
+}
+
+aside h2{
+	color: #006284;
+}
+
+aside li a{
+	display: block;
+	color: #F05E1C;
+	text-decoration-line: none;
+}
+
+aside li a:hover{
+	color: #E1A679;
+}
+
+aside .topic, .content, .reference{
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+

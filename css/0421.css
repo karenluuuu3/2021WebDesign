@@ -1,0 +1,233 @@
+@charset "utf-8";
+/* CSS Document */
+@import url("nav.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	/*font-family: 'Times New Roman', 'Noto Serif TC', serif;*/
+	font-family: 'Noto Serif TC';
+	background: rgba(255, 190, 10, .1);
+}
+
+/*selection*/
+/*變更選取文字的顏色，讓反白顏色比較符合主題*/
+::-moz-selection{ /*Firefox*/
+	color: rgba(255, 255, 255, 1);
+	background: rgba(9, 93, 66, 1);
+}
+
+::selection{
+	color: rgba(255, 255, 255, 1);
+	background: rgba(9, 93, 66, 1);
+}
+
+/*header*/
+header{
+	width:100%;
+	height: 100px;
+	background: rgba(255, 255, 255, 1);
+	box-sizing: border-box;
+	margin: auto; /*中心置中*/
+	
+	position: -webkit-sticky; /*Safari*/
+	position: sticky;
+	top: 0;
+	z-index: 2000;
+}
+
+.h_box{
+	width: 80%;
+	margin: auto;
+}
+
+.h_box img{
+	float: left;
+}
+
+nav{
+	float: right;
+	z-index: 10000;
+}
+
+/*banner*/
+.banner{
+	/*absolute前要relative*/
+	position: relative;
+	
+	overflow:hidden;
+	width:100%;
+	min-width:1200px;
+	height:550px;
+	background:url(../images/banner.jpg) no-repeat;
+	background-size:100%;
+}
+
+/*動態出現的內容*/
+.anitext{
+	position:absolute;
+	top:30%;
+	left:10%;
+	font-family: 'Courgette', cursive;
+	color:rgba(255, 255, 255, 1);
+	font-size:120px;
+	opacity:0;
+	
+	animation-name: ant;
+	animation-duration: 4s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	animation-delay: 1s;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	
+	-webkit-animation-name: ant; /*動畫名稱*/
+	-webkit-animation-duration: 4s; /*動畫時間4秒*/
+	-webkit-animation-iteration-count: 1; /*播放次數一次*/
+	-webkit-animation-timing-function: ease; /*動態方式漸慢開始與結束*/
+	-webkit-animation-delay: 1s; /*一秒後播放*/
+	-webkit-animation-direction: normal; /*動畫播放順序為順向*/
+	-webkit-animation-fill-mode: forwards; /*動畫結束後停格於最後一格，需搭配direction*/
+}
+
+/*動畫名稱要對好*/
+@keyframes ant{
+	from{
+		left: 0%;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+/* section */
+section{
+	width:80%;
+	/*希望縮小的時候不要一直縮小，版面會隨著瀏覽器縮小*/
+	/*但先拿掉因為現在想要先讓整個視窗符合電腦螢幕*/
+	/*min-width:1500px;*/
+	margin:auto;
+}
+
+article{
+	float:left;
+	width:100%;
+	box-sizing:border-box;
+	margin:50px 0px 0px;
+	background:rgba(255,255,255,.5);
+}
+
+/*2n : 雙數*/
+/*雙數則底色變色*/
+/*偽類 Pseudo Class*/
+article:nth-child(2n){
+	background: rgba(255, 190, 10, .1);
+}
+
+article .picbox, article .desbox{
+	float: left;
+	/*特殊容器內的設定要先做relative，否則會以瀏覽器為框架去移動*/
+	position: relative;
+	width: 50%;
+	box-sizing: border-box;
+}
+
+article .desbox{
+	/*圖片會撐滿容器，文字會卡在邊框 => 想要讓文字聚集一點*/
+	padding: 80px;
+	line-height: 2em;
+	/*justify : 讓文字較寬、文字左右切齊*/
+	text-align: justify;
+}
+
+.desbox h1{
+	/*font-family: 'Noto Serif TC', serif;*/
+	font-family: serif;
+	font-weight: 900;
+	font-size: 40px;
+	color: rgba(229, 94, 56, 1);
+	line-height: 2em;
+}
+
+/*報導的文字最後會有的小圖*/
+/*偽元素 Pseudo Element : 也可以加日期文字*/
+.desbox p::after{
+	content: url(../images/sq.jpg);	
+}
+
+.picbox img{
+	width: 100%;
+}
+
+.picbox:hover img{
+	-webkit-filter: brightness(30%); /*Safari*/
+	filter: brightness(30%);
+}
+
+.picbox:hover .fadebox{
+	opacity: 1;
+}
+
+.fadebox{
+	/*偵測容器中心點的位置*/
+	/*把中心從左上角移到正中間*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	
+	-ms-transform: translate(-50%, -50%); /*IE 9*/
+	-webkit-transform: translate(-50%, -50%); /*Safari*/
+	transform: translate(-50%, -50%);
+	opacity: 0;
+}
+
+.fadebox a{
+	display: block;
+	font-size: 25px;
+	padding: 16px 32px;
+	color: rgba(255, 255, 255, 1);
+	text-decoration: none;
+	background: rgba(229, 94, 56, 1);
+}
+
+.fadebox a:hover{
+	color: rgba(229, 94, 56, 1);
+	background: rgba(255, 255, 255, 1);
+}
+
+/* aside */
+aside{
+	position:fixed;
+	right:10px;
+	bottom:10px;
+	z-index:100000;
+}
+
+.totop{
+	width:44px;
+	height:44px;
+	background:rgba(255, 190, 10, .5) url(../images/top2x.png) no-repeat;
+	background-size:200%;
+	background-position:0px 0px;
+}
+
+.totop:hover{
+	background:rgba(255, 190, 10, .5) url(../images/top2x.png) no-repeat;
+	background-size:200%;
+	background-position:-44px 0px;
+}
+
+/*footer*/
+footer{
+	clear:both;
+	padding:20px 0px;
+	text-align:center;
+	color:rgba(9, 93, 66, 1);
+	font-size: 14px;
+}
